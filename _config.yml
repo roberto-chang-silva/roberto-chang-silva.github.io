@@ -28,8 +28,8 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Researcher in climate and data science. Passionate about machine learning and open-source systems."
   location         : "Earth"
-  employer         : "Seoul National University of Science and Technology (Seoultech)"
-  uri              : "https://roberto-chang-silva.github.io"
+  employer         : "Seoultech"
+  uri              : "https://air.seoultech.ac.kr/index.do"
   email            : "rjavierch@seoultech.ac.kr" 
 
   # Academic websites
@@ -39,10 +39,10 @@ author:
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0001-7505-6787"
-  semantic         : # URL
+  semantic         : "https://www.semanticscholar.org/author/Roberto-Chang-Silva/2021913419"
   ssrn             : # URL
   pubmed           : # URL
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Roberto-Chang-Silva"
   scopus           : # URL
   zotero           : # URL
 
