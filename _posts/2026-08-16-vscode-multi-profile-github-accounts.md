@@ -59,11 +59,11 @@ Since this setup isn't VS Code's default configuration, the OS doesn't know whic
 
 To work around this and complete sign-in on the correct profile, follow this sequence:
 
-1. Start the sign-in flow. The browser will attempt to redirect back into VS Code via a link — close that prompt and click **Cancel** on the floating notification in the bottom-right corner.
-2. VS Code will then offer a second authentication method — click **Yes**. This will also try to redirect via a link — again, close it and click **Cancel**.
+1. Start the sign-in flow. The browser will attempt to redirect back into VS Code via a link, close that prompt and click **Cancel** on the floating notification in the bottom-right corner.
+2. VS Code will then offer a second authentication method, click **Yes**. This will also try to redirect via a link, again, close it and click **Cancel**.
 3. VS Code will now fall back to a third method: a manual verification code. Click **Yes** and follow the on-screen steps.
 4. Copy the 8-character code shown, paste it into the browser when prompted, and confirm.
 
-This forces VS Code to authenticate using the device code flow instead of the redirect, so the sign-in completes on the profile you actually launched — not the default one that happened to intercept the callback.
+This forces VS Code to authenticate using the device code flow instead of the redirect, so the sign-in completes on the profile you actually launched, not the default one that happened to intercept the callback.
 
 **Note:** or instead on doing this auth using ssh-keys but I will not cover this.
