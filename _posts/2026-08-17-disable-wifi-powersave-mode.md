@@ -10,6 +10,8 @@ tags:
 
 Wi-Fi **power-save** in my Thinkpad (fedora OS) makes the card enter low-power mode when idle, causing **high latency**, **jitter**, and **packet loss** on sensitive connections like Tailscale, gaming, or VoIP. This doesn't happen on Ethernet because it's wired and stable. This happens becasue as I normally work with my laptop remotely to a workstation so to save some energy and get 8hrs battery i ran it in powersave mode. Also the Wifi signal is interrupted after suspending the laptop in this mode and can't connect it without a reboot.
 
+# How to do it?
+
 ## Solution, create a rule
 ```bash
 sudo tee /etc/NetworkManager/conf.d/00-wifi-powersave.conf << EOF > /dev/null
