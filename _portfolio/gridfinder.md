@@ -5,7 +5,7 @@ collection: portfolio
 permalink: /portfolio/gridfinder/
 ---
 
-GridFinder is an interactive visualization that helps you quickly see how different satellite missions tile the Earth. It’s useful for picking the right dataset, understanding coverage, and planning analyses.
+GridFinder is an interactive visualization that helps you quickly see how different satellite missions tile the Earth. It's useful for picking the right dataset, understanding coverage, and planning analyses.
 
 - Supports 8 missions: Landsat, Sentinel‑2, MODIS, ASTER, and others  
 - Built as a lightweight, static web app  

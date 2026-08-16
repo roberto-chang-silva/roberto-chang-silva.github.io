@@ -65,3 +65,5 @@ To work around this and complete sign-in on the correct profile, follow this seq
 4. Copy the 8-character code shown, paste it into the browser when prompted, and confirm.
 
 This forces VS Code to authenticate using the device code flow instead of the redirect, so the sign-in completes on the profile you actually launched — not the default one that happened to intercept the callback.
+
+**Note:** or instead on doing this auth using ssh-keys but I will not cover this.
