@@ -1,6 +1,7 @@
 ---
 title: "Trivia Dataset & Tooling Links"
 date: 2026-08-16
+permalink: /posts/trivia-game-datasets-and-tools/
 tags:
   - datasets
   - trivia

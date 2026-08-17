@@ -1,6 +1,7 @@
 ---
 title: "The Ultimate List of Free Browser Party Games (No Download Needed)"
 date: 2026-08-16
+permalink: /posts/free-online-party-games-no-download/
 tags:
     - games
     - discord
