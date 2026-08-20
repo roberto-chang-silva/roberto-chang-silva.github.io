@@ -11,12 +11,12 @@ I ran into a problem recently. I needed to SSH into a server sitting on my offic
 
 To route traffic from my laptop through the workstation and into the non-Tailscale server, I needed to configure both the Tailscale control panel and the workstation itself.
 
-**Step 1:** I want to my Tailscale Admin Console and create a new Service. I named  it something descriptive like `svc:my-office-local-server` and assign the incoming port as `tcp:2222`.
+**Step 1:** I want to my Tailscale Admin Console and create a new Service. I named  it something descriptive like `svc:my-office-local-server` and assign the incoming port as `tcp:22`.
 
 **Step 2:** On my remote workstation (same physical network of the shared server), I ran the Tailscale serve command to forward incoming Tailnet traffic over the local physical network to the target machine.
 
 ```bash
-sudo tailscale serve --service=svc:my-office-local-server --tcp=2222 tcp://192.168.1.50:22
+sudo tailscale serve --service=svc:my-office-local-server --tcp=22 tcp://192.168.1.50:22
 ```
 
 Possibly you'll need to approve the connection in your Tailnet console.
