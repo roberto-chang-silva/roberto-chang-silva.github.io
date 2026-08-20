@@ -28,11 +28,29 @@ Check the [ucore README](https://github.com/ublue-os/ucore) flavor matrix. Went 
 ```bash
 podman run -ti --rm quay.io/coreos/mkpasswd --method=yescrypt
 ```
+```bash
+# Let it get the image and start the container 
+Trying to pull quay.io/coreos/mkpasswd:latest...
+Getting image source signatures
+Copying blob a07a6b06265a done   | 
+Copying blob 87ee49847e03 done   | 
+Copying config cf86c76b05 done   | 
+Writing manifest to image destination
+Password: # Type your super secure password and hit Enter
+```
+```bash
+dfasdFAESFASDfasdFQ@#W$!@F@#Fasdf2#F@#FASDF@34234 # Your hash (example)!
+```
 
 ## Write the Butane config
 
 Based on the [ucore-autorebase example](https://github.com/ublue-os/ucore/blob/main/examples/ucore-autorebase.butane):
 
+In your working directory
+
+```bash
+nano ucore-autorebase.bu
+```
 ```yaml
 variant: fcos
 version: 1.4.0
@@ -48,13 +66,6 @@ passwd:
         - wheel
       shell: /bin/bash
 
-    - name: ai
-      ssh_authorized_keys:
-        - KEY1
-      password_hash: password2
-      home_dir: /home/ai
-      shell: /bin/bash
-
 storage:
   directories:
     - path: /etc/ucore-autorebase
@@ -64,7 +75,7 @@ storage:
       mode: 0644
       overwrite: true
       contents:
-        inline: my-pc
+        inline: my-new-hostname
 
 systemd:
   units:
@@ -106,6 +117,8 @@ systemd:
         WantedBy=multi-user.target
 ```
 
+**Save the file!**
+
 Please, never commit real hashes/keys, keep the actual `.bu`/`.ign` out of version control.
 
 ## Transpile to Ignition
@@ -123,12 +136,19 @@ Second USB, HTTP, whatever `coreos-installer` can reach.
 
 ## Firmware
 
-Disable Secure Boot, UEFI mode on.
+On your bare metal device go to your bios and disable Secure Boot, UEFI mode on.
 
 ## Boot live ISO, install
 
 Check the disk were you will install it first! my case was `nvme0n1` make sure you don't have important information in that disk as it will be wiped. Follow the 3 BBB's rule before doing this: Backup, backup and backup!
 
+```bash
+# Check your current devices
+lsblk
+```
+```bash
+nvme0n1     259:0    0 119.2G  0 disk # I used this disk to install the image.
+```
 ```bash
 sudo coreos-installer install /dev/nvme0n1 \
   --ignition-file /path/to/ucore-autorebase.ign
@@ -136,18 +156,13 @@ sudo coreos-installer install /dev/nvme0n1 \
 
 ## Reboot, let it rebase
 
+Once the installation is finished simply run:
+
 ```bash
 sudo systemctl reboot
 ```
 
 Don't power-cycle manually, it reboots itself twice (unsigned rebase, then signed).
-
-## Enable services post-rebase
-
-Nothing's on by default:
-```bash
-sudo systemctl enable --now cockpit.service
-```
 
 ## SecureBoot (optional, after confirming ucore is running)
 
@@ -155,6 +170,113 @@ sudo systemctl enable --now cockpit.service
 sudo mokutil --import /etc/pki/akmods/certs/akmods-ublue.der
 ```
 Set a password, reboot into MOK import, register the key, flip SecureBoot on in BIOS.
+
+## Enable services post-rebase
+
+Nothing's on by default:
+
+### TuneD
+
+```bash
+sudo systemctl enable --now tuned
+tuned-adm active
+```
+
+See available profiles
+
+```bash
+tuned-adm list
+```
+```bash
+Available profiles:
+- accelerator-performance     - Throughput performance based tuning with disabled higher latency STOP states
+- atomic-guest                - Optimize virtual guests based on the Atomic variant
+- atomic-host                 - Optimize bare metal systems running the Atomic variant
+- aws                         - Optimize for aws ec2 instances
+- balanced                    - General non-specialized tuned profile
+- balanced-battery            - Balanced profile biased towards power savings changes for battery
+- desktop                     - Optimize for the desktop use-case
+- hpc-compute                 - Optimize for HPC compute workloads
+- intel-sst                   - Configure for Intel Speed Select Base Frequency
+- latency-performance         - Optimize for deterministic performance at the cost of increased power consumption
+- network-latency             - Optimize for deterministic performance at the cost of increased power consumption, focused on low latency network performance
+- network-throughput          - Optimize for streaming network throughput, generally only necessary on older CPUs or 40G+ networks
+- optimize-serial-console     - Optimize for serial console use.
+- powersave                   - Optimize for low power consumption
+- throughput-performance      - Broadly applicable tuning that provides excellent performance across a variety of common server workloads
+- virtual-guest               - Optimize for running inside a virtual guest
+- virtual-host                - Optimize for running KVM guests
+Current active profile: balanced
+```
+
+Choose a prefered profile
+
+```bash
+sudo tuned-adm profile latency-performance
+```
+
+### Cockpit:
+```bash
+sudo systemctl enable --now cockpit.service
+sudo systemctl start cockpit.service
+```
+
+### Tailscale:
+
+```bash
+sudo systemctl enable --now tailscaled.service
+sudo tailscale up
+```
+
+When setting `--accept-routes` if you see: *Subnet routes and exit nodes may not work correctly.* see and apply [https://tailscale.com/s/ip-forwarding](https://tailscale.com/s/ip-forwarding)
+
+When setting `--advertise-exit-nodes` if you see: *UDP GRO forwarding is suboptimally configured on some physical interfaces, UDP forwarding throughput capability will increase with a configuration change.* see and apply [https://tailscale.com/s/ethtool-config-udp-gro](https://tailscale.com/s/ethtool-config-udp-gro)
+
+Once `tailscale0` is up, lock SSH/Cockpit/admin stuff to that interface only via firewalld.
+
+After that one could use `tailscale serve` to get a signed url with the tailnet domain.
+
+### Podman rootless + Quadlet:
+
+```bash
+sudo systemctl enable --now podman.socket
+systemctl --user start podman.socket
+```
+
+In the uCore instructions it is said to run `systemctl --user enable podman-restart.service` to enable podman containers as services, but that documentation is describing the older, more manual podman-restart.service approach because it's a general-purpose fallback that works regardless of how you started your containers, but Quadlets are genuinely the better answer for almost everyone on uCore/CoreOS today, and it's worth understanding why the docs still lead with the older method.
+
+Instead just create your services manually or use `podlet`
+
+```ini
+# ~/.config/containers/systemd/myapp.container
+[Container]
+Image=docker.io/library/myapp:latest
+PublishPort=8080:8080
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
+```
+
+```bash
+systemctl --user daemon-reload
+systemctl --user enable --now myapp.service
+```
+
+Enable linger so containers survive logout:
+```bash
+loginctl enable-linger $USER
+```
+
+### Homebrew package manager
+
+I normally use distroboxes for cli apps but in case it is needed install homebrew for linux here [https://brew.sh/](https://brew.sh/). To me, this is easier to run zellij, btop and others though it was recommended using distroboxes.
+
+## Firewalld
+
+Don't forget always to check your rules!
 
 ## Checks
 
@@ -181,44 +303,3 @@ Set a password, reboot into MOK import, register the key, flip SecureBoot on in 
 | Boot logs            | `journalctl -b`                                 |
 | Firewalld zones      | `sudo firewall-cmd --get-active-zones`          |
 | Reload firewalld     | `sudo firewall-cmd --reload`                    |
-
-## Tailscale
-
-```bash
-sudo systemctl enable --now tailscaled
-sudo tailscale up
-```
-Once `tailscale0` is up, lock SSH/Cockpit/admin stuff to that interface only via firewalld.
-
-## Podman rootless + Quadlet
-
-```ini
-# ~/.config/containers/systemd/myapp.container
-[Container]
-Image=docker.io/library/myapp:latest
-PublishPort=8080:8080
-
-[Service]
-Restart=always
-
-[Install]
-WantedBy=default.target
-```
-
-```bash
-systemctl --user daemon-reload
-systemctl --user enable --now myapp.service
-```
-
-Enable linger so containers survive logout:
-```bash
-loginctl enable-linger $USER
-```
-
-## Firewalld
-
-Don't forget always to check your rules!
-
-## Access map
-
-Cockpit has no key/2FA login, PAM password only, keep it Tailscale-only unless there's a reverse proxy with real auth in front.
