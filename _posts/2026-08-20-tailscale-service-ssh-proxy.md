@@ -18,8 +18,20 @@ To route traffic from my laptop through the workstation and into the non-Tailsca
 ```bash
 sudo tailscale serve --service=svc:my-office-local-server --tcp=22 tcp://192.168.1.50:22
 ```
+```bash
+Available within your tailnet:
 
-Possibly you'll need to approve the connection in your Tailnet console.
+|-- tcp://my-office-local-server.tails-scales.ts.net:22 (TLS over TCP)
+|-- tcp://<tailscale IPv4>:22
+|-- tcp://<tailscale IPv6>:22
+|--> tcp://192.168.1.50:22
+
+Serve started and running in the background.
+To disable the proxy, run: tailscale serve --service=svc:my-office-local-server --tcp=22 off
+To remove config for the service, run: tailscale serve clear svc:my-office-local-server 
+```
+
+Perhaps you'll need to approve the connection in your Tailnet console.
 
 # Testing It
 
