@@ -2,8 +2,10 @@
 title: 'M575 Trackball: Scroll with the trackball instead of the wheel in KDE'
 date: 2026-08-16
 permalink: /posts/kde-trackball-scroll/
+categories:
+  - notes-snippets
 tags:
-  - trackball
+  - peripherials
   - kde
 ---
 

@@ -2,11 +2,10 @@
 title: "The Ultimate List of Free Browser Party Games (No Download Needed)"
 date: 2026-08-16
 permalink: /posts/free-online-party-games-no-download/
+categories:
+  - notes-snippets
 tags:
-    - games
-    - discord
-    - remote-hangouts
-    - browser-games
+    - misc
 ---
 
 Every so often the group chat runs dry on ideas for game night, and someone inevitably asks "didn't we already play that one?" After digging through recommendations (shoutout to [this r/AskGames thread](https://www.reddit.com/r/AskGames/comments/t0902p/any_free_party_website_games_that_you_know_of/) for kicking off the list), here's a running collection of browser-based, mostly-free party games that need zero installation, just send a link in Discord/Zoom/whatever and go. Most scale from a handful of people up to a full server.

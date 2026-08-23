@@ -2,10 +2,12 @@
 title: 'Local AI: Ollama + Open WebUI (old)'
 date: 2026-08-16
 permalink: /posts/ollama-open-webui/
+categories:
+  - homelab-systems
 tags:
-  - immutable distro
+  - local-ai
   - podman
-  - container
+  - self-hosted
 ---
 
 Local, private AI setup, Ollama as the inference engine, Open WebUI as the frontend. Runs as Podman rootless via Quadlets/systemd, works well on atomic desktops like Fedora/Bluefin/Aurora/uCore/etc!. Though this is old, use llama.cpp instead!

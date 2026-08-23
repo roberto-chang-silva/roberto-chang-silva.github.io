@@ -2,7 +2,9 @@
 title: "Getting Tailscale's ethtool offload tweak to persist on Fedora uCore"
 date: 2026-08-20
 permalink: /posts/tailscale-ethtool-offload-networkmanager-dispatcher/
-tags: [fedora, ucore, networkmanager, tailscale, selinux, homelab]
+categories:
+  - homelab-systems
+tags: [fedora, ucore, networking, tailscale]
 ---
 
 Tailscale's docs for subnet routers and exit nodes tell you to run an `ethtool` command to enable UDP GRO forwarding, then persist it with a `networkd-dispatcher` script. Problem: on Fedora uCore (and Kinoite, Silverblue, anything ostree-based really), there's no `networkd-dispatcher` at all. These systems run NetworkManager, not systemd-networkd, so the official instructions just don't apply. Here's what actually works.

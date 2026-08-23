@@ -2,9 +2,12 @@
 title: 'VSCodium Flatpak: Trash + KWallet fixes'
 date: 2026-08-16
 permalink: /posts/vscodium-flatpak-trash-kwallet/
+categories:
+  - notes-snippets
 tags:
-  - VSCode
-  - kde
+  - vscode
+  - flatpak
+  - linux-desktop
 ---
 
 Flatpak sandboxing breaks two things in VSCodium/VSCode on a Fedora Kinoite-based distro (at least in my case): trashbin doesn't work, and it won't talk to KWallet to store github credentials, so it either nags for passwords or stores tokens in plain text.

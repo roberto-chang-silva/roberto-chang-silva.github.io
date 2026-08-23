@@ -2,10 +2,12 @@
 title: 'GitHub multi-account in VSCode'
 date: 2026-08-16
 permalink: /posts/vscode-multi-profile-github-accounts/
+categories:
+  - workflows-code
 tags:
-  - linux
-  - VScode
-  - GitHub
+  - vscode
+  - github
+  - dev-environment
 ---
 
 I like to use separated GitHub accounts for work (research) and personal stuff (homelab). For dev I normally use VSCode, however it doesn't support multiple github accounts easily (theres a workaround out there in stackoverflow but it was difficult to me to decide which account was syncing my repos). Thankfully, VSCode is built using Electron and with some small changes I can get multi-profile VSCode with separated GitHub accounts. This is a simple guide to set up separate VS Code profiles with different GitHub accounts on Linux (like work vs. personal accounts) using the `--user-data-dir` flag and KDE Plasma application launchers.

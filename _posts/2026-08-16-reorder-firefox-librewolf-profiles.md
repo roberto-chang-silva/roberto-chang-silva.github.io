@@ -2,10 +2,11 @@
 title: 'Reorder firefox/librewolf profiles in the profile manaer window'
 date: 2026-08-16
 permalink: /posts/reorder-firefox-librewolf-profiles/
+categories:
+  - notes-snippets
 tags:
-  - Firefox
-  - Librewolf
-  - Flatpak
+  - firefox
+  - librewolf
 ---
 
 For daily usage, I prefer to use profiles to separate logins and cookies; one profile for work accounts, another for personal use, and a separate one for gaming.

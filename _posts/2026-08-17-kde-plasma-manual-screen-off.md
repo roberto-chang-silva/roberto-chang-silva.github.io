@@ -2,8 +2,10 @@
 title: 'KDE Plasma: Manual Screen Off Button'
 date: 2026-08-17
 permalink: /posts/kde-plasma-manual-screen-off/
+categories:
+  - notes-snippets
 tags:
-  - fedora
+  - linux-desktop
   - kde
 ---
 

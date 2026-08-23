@@ -2,13 +2,13 @@
 title: "A small Glance setup with Podman, feeds, and Tailscale. A personal feed!"
 date: 2026-08-17
 permalink: /posts/glance-podman-tailscale/
+categories:
+  - homelab-systems
 tags:
   - podman
-  - glance
-  - rss
-  - youtube
+  - homelab
   - tailscale
-  - self-hosting
+  - self-hosted
 ---
 
 I wanted a lightweight dashboard for research, news, and YouTube feeds without having to look to all the bloat is out there in the internet. Glance fits nicely (at least for me): it is just a self-hosted dashboard, so the setup is mostly a container, a config directory, and accepting that RSS is still the least exciting but most reliable web API. I deploy this in a spare raspberry pi I had with all my devices using Tailscale personal VPN.

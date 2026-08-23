@@ -2,10 +2,13 @@
 title: 'uCore Bare-Metal install (Butane, Podman, Tailscale)'
 date: 2026-08-16
 permalink: /posts/ucore-baremetal-install/
+categories:
+  - homelab-systems
 tags:
-  - homelab
+  - ucore
   - podman
-  - tailscale
+  - homelab
+  - coreos
 ---
 
 ucore-baremetal-install

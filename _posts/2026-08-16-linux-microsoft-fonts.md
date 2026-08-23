@@ -2,8 +2,11 @@
 title: 'Installing Microsoft fonts on a linux desktop distro (no root)'
 date: 2026-08-16
 permalink: /posts/linux-microsoft-fonts/
+categories:
+  - notes-snippets
 tags:
-  - linux
+  - linux-desktop
+  - fonts
 ---
 
 Time ago I left behind Windows and replaced it with a Linux distro. Of course, they don't come with the Windows fonts. Easiest fix: drop the fonts into your user directory.

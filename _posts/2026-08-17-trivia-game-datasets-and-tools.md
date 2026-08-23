@@ -2,11 +2,11 @@
 title: "Trivia Dataset & Tooling Links"
 date: 2026-08-16
 permalink: /posts/trivia-game-datasets-and-tools/
+categories:
+  - notes-snippets
 tags:
   - datasets
-  - trivia
-  - huggingface
-  - llm
+  - misc
 ---
 
 The other day I was interested on creating a big list of trivia questions to play with my friends. I surfed the internet and found these!

@@ -2,10 +2,11 @@
 title: "Enabling Firefox's containers"
 date: 2026-08-16
 permalink: /posts/enable-containers-firefox-librewolf-flatpak/
+categories:
+  - notes-snippets
 tags:
-  - Librewolf
-  - Firefox
-  - Flatpak
+  - librewolf
+  - firefox
 ---
 
 For some reason, in my Firefox's installations of my Linux machines the containers function is just not enabled and can't find it in the settings. This includes Librewolf browser as well. It its very simple to activate.

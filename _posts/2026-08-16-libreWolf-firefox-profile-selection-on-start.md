@@ -2,10 +2,11 @@
 title: 'Firefox/librewolf profile manager at start'
 date: 2026-08-16
 permalink: /posts/libreWolf-firefox-profile-selection-on-start/
+categories:
+  - notes-snippets
 tags:
-  - Firefox
-  - Librewolf
-  - Flatpak
+  - firefox
+  - librewolf
 ---
 
 Firefox/librewolf has currently two ways to create profiles (per profile or objective, it's on you). I prefer the old way (small classic GUI to select a profile) because I can set it to open it on start prior opening a default profile. I like it since i can decide which profile should open a link I found on VSCode or a script or any other source or even to reject opening a link in case I just misclicked.
