@@ -9,6 +9,8 @@ tags:
   - homelab
   - tailscale
   - self-hosted
+
+excerpt: "I wanted a lightweight, self-hosted dashboard for news, research, and YouTube feeds without the bloat. Glance fits the bill, deployed on a spare Raspberry Pi."
 ---
 
 I wanted a lightweight dashboard for research, news, and YouTube feeds without having to look to all the bloat is out there in the internet. Glance fits nicely (at least for me): it is just a self-hosted dashboard, so the setup is mostly a container, a config directory, and accepting that RSS is still the least exciting but most reliable web API. I deploy this in a spare raspberry pi I had with all my devices using Tailscale personal VPN.

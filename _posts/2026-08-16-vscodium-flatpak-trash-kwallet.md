@@ -8,6 +8,8 @@ tags:
   - vscode
   - flatpak
   - linux-desktop
+
+excerpt: "Flatpak sandboxing breaks VSCodium on Fedora Kinoite: trashbin doesn't work, and it can't reach KWallet, leaving GitHub tokens stored in plain text."
 ---
 
 Flatpak sandboxing breaks two things in VSCodium/VSCode on a Fedora Kinoite-based distro (at least in my case): trashbin doesn't work, and it won't talk to KWallet to store github credentials, so it either nags for passwords or stores tokens in plain text.

@@ -7,6 +7,8 @@ categories:
 tags:
   - peripherials
   - kde
+
+excerpt: "I prefer thumb trackballs with scroll-via-ball, which worked on Windows via AutoHotkey but not Linux, until I found KDE's built-in implementation."
 ---
 
 Trackballs over mice for me (except for gaming), thumb trackballs specifically, I like those best. The one thing I need is scroll-via-ball. Had this working on Windows via AutoHotkey with a smooth scrolling [script](https://github.com/eynsai/Smooth-Trackball-Scrolling), but that doesn't carry over to Linux. Luckily KDE DE (Desktop Environment) has a core implementation for this. Here's how I set it up.

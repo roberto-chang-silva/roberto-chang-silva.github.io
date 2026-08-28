@@ -122,10 +122,28 @@ I write here roughly once a week (or not) not on a content calendar, but organic
         {% capture written_year %}{{ year }}{% endcapture %}
       {% endif %}
 
-      {% assign post_category = post.categories[0] %}
-      <div class="post-item cat-{{ post_category }}">
-        {% include archive-single.html %}
-      </div>
+    {% assign post_category = post.categories[0] %}
+    <div class="post-item cat-{{ post_category }}">
+      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline">
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+        </h2>
+
+        {% if post.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+
+        {% if post.header.teaser %}
+          <div class="archive__item-teaser" style="max-width: 500px;">
+            <img src="{% if post.header.teaser contains '://' %}{{ post.header.teaser }}{% else %}{{ post.header.teaser | prepend: "/images/" | prepend: base_path }}{% endif %}" style="width: 100%; height: auto; display: block;" alt="">
+          </div>
+        {% endif %}
+
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+        {% endif %}
+      </article>
+    </div>
     {% endfor %}
   </div>
 </div>

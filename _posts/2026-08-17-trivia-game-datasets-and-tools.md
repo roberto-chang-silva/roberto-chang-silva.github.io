@@ -7,6 +7,8 @@ categories:
 tags:
   - datasets
   - misc
+
+excerpt: "The other day I was interested on creating a big list of trivia questions to play with my friends. I surfed the internet and found these!"
 ---
 
 The other day I was interested on creating a big list of trivia questions to play with my friends. I surfed the internet and found these!

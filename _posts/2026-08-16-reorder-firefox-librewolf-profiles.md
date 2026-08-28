@@ -7,11 +7,11 @@ categories:
 tags:
   - firefox
   - librewolf
+
+excerpt: "Firefox and LibreWolf let you create separate profiles for work, personal, and gaming logins, but there's no built-in GUI way to reorder them once created."
 ---
 
-For daily usage, I prefer to use profiles to separate logins and cookies; one profile for work accounts, another for personal use, and a separate one for gaming.
-
-The catch is that in Firefox and LibreWolf, once you create a profile using `about:profiles`, there is no built-in GUI way to change the order in which they appear.
+For daily usage, I prefer to use profiles to separate logins and cookies; one profile for work accounts, another for personal use, and a separate one for gaming. The catch is that in Firefox and LibreWolf, once you create a profile using `about:profiles`, there is no built-in GUI way to change the order in which they appear.
 
 As I mentioned in my previous post ([[libreWolf-firefox-profile-selection-on-start]]), I configure my browser to always open the profile selector by default. This way, whenever I click an external link, I can choose which profile handles it. However, the profile order varies across my devices despite having the identical profile names. Since there is no graphical way to fix this, here is how you can manually reorder them:
 

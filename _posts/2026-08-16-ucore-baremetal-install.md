@@ -9,9 +9,9 @@ tags:
   - podman
   - homelab
   - coreos
+excerpt: "uCore is Fedora CoreOS with homelab defaults baked in by Universal Blue: declared upfront in Butane, transpiled to Ignition, consumed once at boot."
 ---
 
-ucore-baremetal-install
 uCore is Fedora CoreOS with sane homelab defaults (Tailscale, nvidia/zfs variants) baked in by Universal Blue. I use it for containers in my homelab servers as it is really easy to set, manage and use. /usr is read-only, only /etc and /var persist, everything gets declared upfront in Butane, transpiled to Ignition, consumed once on first boot. No installer wizard.
 
 # How to do it?

@@ -7,6 +7,8 @@ categories:
 tags:
   - linux-desktop
   - kde
+
+excerpt: "I needed to power off my laptop screen on demand without pausing background tasks. Here's a quick guide to a menu item that puts the display straight to standby."
 ---
 
 The other day (could be months, week, days ago) I was running some commands in my laptop and was unable to turn off the screen on demand so I can leave it unattended without burning the pixels of my screen. So this is a quick guide to create a dedicated menu item that instantly powers off the monitor (putting it into standby) while keeping background tasks running.

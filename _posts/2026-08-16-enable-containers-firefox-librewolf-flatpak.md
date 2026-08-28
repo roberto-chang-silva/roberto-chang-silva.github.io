@@ -7,6 +7,8 @@ categories:
 tags:
   - librewolf
   - firefox
+
+excerpt: "For some reason, in my Firefox's installations of my Linux machines the containers function is just not enabled and can't find it in the settings. This includes Librewolf browser as well. It its very simple to activate."
 ---
 
 For some reason, in my Firefox's installations of my Linux machines the containers function is just not enabled and can't find it in the settings. This includes Librewolf browser as well. It its very simple to activate.

@@ -8,6 +8,8 @@ tags:
   - privacy
   - llm
   - kde
+
+excerpt: 'A way to "filter" your clipboard before pasting into an LLM chatbot, using KDE''s clipboard actions to strip names, IPs, emails, and other details.'
 ---
 
 This is a way I found to "filter" your clipboard right before pasting it into an LLM chatbot (ChatGPT, Mistral, Gemini, etc.). Specifically for my case, I use KDE as a desktop environment, which happens to have an option to invoke actions on a clipboard element. I thought, why not create a filter to remove names, numbers, hostnames, IPs, usernames, emails, and other personal details, so the AI can still help me with my inquiries.

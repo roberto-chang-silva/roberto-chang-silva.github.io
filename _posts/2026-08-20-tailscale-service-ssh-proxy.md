@@ -8,6 +8,9 @@ tags:
   - tailscale
   - networking
   - homelab
+# header:
+#   teaser: "500x300.png"
+excerpt: "I needed to SSH into a shared office server that can't run Tailscale, so I bridged it through a nearby workstation using Tailscale Services and a TCP forwarder."
 ---
 
 I ran into a problem recently. I needed to SSH into a server sitting on my office's local network that cannot install Tailscale as it is a shared device in a small office, using my pc from outside. Fortunately, my workstation at the office right next to that server *does* have Tailscale installed. Instead of messing with complex router port forwarding or VPN gateways, I used Tailscale Services and a TCP forwarder to bridge these devices.

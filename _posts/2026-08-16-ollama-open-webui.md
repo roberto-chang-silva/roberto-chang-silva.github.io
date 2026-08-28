@@ -8,6 +8,8 @@ tags:
   - local-ai
   - podman
   - self-hosted
+
+excerpt: "A local, private AI setup: Ollama plus Open WebUI, running rootless via Podman Quadlets/systemd. Works well on atomic desktops like Fedora and Bluefin."
 ---
 
 Local, private AI setup, Ollama as the inference engine, Open WebUI as the frontend. Runs as Podman rootless via Quadlets/systemd, works well on atomic desktops like Fedora/Bluefin/Aurora/uCore/etc!. Though this is old, use llama.cpp instead!
