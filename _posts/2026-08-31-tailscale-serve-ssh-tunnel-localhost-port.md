@@ -8,7 +8,7 @@ tags:
   - systemd
   - homelab
   - networking
-category:
+categories:
   - workflows-code
 excerpt: "How to expose a service bound to localhost on a remote server by chaining a persistent SSH tunnel into Tailscale Serve, plus the systemd unit to keep it alive."
 ---

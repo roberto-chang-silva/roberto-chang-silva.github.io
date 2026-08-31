@@ -7,7 +7,7 @@ tags:
   - ssh
   - linux
   - workflows-code
-category:
+categories:
   - homelab-systems
 excerpt: Fixed an invalid format error when importing SSH keys into ChromeOS Secure Shell by addressing missing newline characters and cipher issues.
 ---
