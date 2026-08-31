@@ -4,7 +4,12 @@ date: 2026-08-27
 permalink: /posts/code-server-tailscale-coreos/
 categories:
   - workflows-code
-tags: [code-server, tailscale, fedora-coreos, homelab, remote-dev]
+tags: 
+  - code-server
+  - tailscale
+  - fedora-coreos
+  - homelab
+  - remote-dev
 header:
   teaser: "/code-server-tailscale-coreos/code-server-remote-installation.png"
 

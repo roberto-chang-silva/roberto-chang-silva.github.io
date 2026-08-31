@@ -4,7 +4,11 @@ date: 2026-08-20
 permalink: /posts/tailscale-ethtool-offload-networkmanager-dispatcher/
 categories:
   - homelab-systems
-tags: [fedora, ucore, networking, tailscale]
+tags:
+  - fedora
+  - ucor
+  - networking
+  - tailscale
 excerpt: "Tailscale's UDP GRO forwarding docs assume networkd-dispatcher, but ostree-based systems like Fedora uCore run NetworkManager instead. Here's what works."
 ---
 

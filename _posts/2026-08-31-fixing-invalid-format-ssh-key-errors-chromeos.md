@@ -2,8 +2,13 @@
 title: Fixing Invalid Format SSH Key Errors in ChromeOS Secure Shell
 date: 2026-08-31
 permalink: /posts/fixing-invalid-format-ssh-key-errors-chromeos
-tags: [chromeos, ssh, linux, workflows-code]
-category: homelab-systems
+tags: 
+  - chromeos
+  - ssh
+  - linux
+  - workflows-code
+category:
+  - homelab-systems
 excerpt: Fixed an invalid format error when importing SSH keys into ChromeOS Secure Shell by addressing missing newline characters and cipher issues.
 ---
 

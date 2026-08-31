@@ -2,8 +2,14 @@
 title: "Serving a Localhost-Only Port Through Tailscale via an SSH Tunnel"
 date: 2026-08-31
 permalink: /posts/tailscale-serve-ssh-tunnel-localhost-port/
-tags: [tailscale, ssh, systemd, homelab, networking]
-category: homelab-systems
+tags:
+  - tailscale
+  - ssh
+  - systemd
+  - homelab
+  - networking
+category:
+  - workflows-code
 excerpt: "How to expose a service bound to localhost on a remote server by chaining a persistent SSH tunnel into Tailscale Serve, plus the systemd unit to keep it alive."
 ---
 
