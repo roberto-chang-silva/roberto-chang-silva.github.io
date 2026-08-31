@@ -1,5 +1,5 @@
 ---
-title: Fixing Invalid Format SSH Key Errors in ChromeOS Secure Shell
+title: "Fixing Invalid Format SSH Key Errors in ChromeOS Secure Shell"
 date: 2026-08-31
 permalink: /posts/fixing-invalid-format-ssh-key-errors-chromeos
 tags: 

@@ -1,5 +1,5 @@
 ---
-title: Setting Up SSH ProxyJump in ChromeOS Terminal
+title: "Setting Up SSH ProxyJump in ChromeOS Terminal"
 date: 2026-09-01
 permalink: /posts/ssh-proxyjump-chromeos-terminal/
 tags:
