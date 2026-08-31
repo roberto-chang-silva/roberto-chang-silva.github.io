@@ -1,14 +1,14 @@
 ---
 title: "Setting Up SSH ProxyJump in ChromeOS Terminal"
 date: 2026-09-01
-permalink: /posts/ssh-proxyjump-chromeos-terminal/
+permalink: /posts/ssh-proxyjump-chromeos-terminal
 tags:
   - ssh
   - chromeos
   - networking
 categories:
   - homelab-systems
-excerpt: How to set up multi-hop SSH tunneling and port forwarding inside the sandboxed ChromeOS Terminal app without ProxyJump pipe errors.
+excerpt: "How to set up multi-hop SSH tunneling and port forwarding inside the sandboxed ChromeOS Terminal app without ProxyJump pipe errors."
 ---
 
 I recently needed to connect to an internal target host through a bastion jump box from this Chromebook I bought. Naturally, I tried my usual SSH configuration with `ProxyJump`, but the sandboxed ChromeOS Secure Shell terminal immediately threw a fatal pipe communication error. After ruling out heavy alternatives like running a full Crostini Linux VM or Termux just for basic remote access, I put together a clean workaround using native OpenSSH directives in my local SSH configuration file.

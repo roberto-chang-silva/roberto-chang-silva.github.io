@@ -9,7 +9,7 @@ tags:
   - workflows-code
 categories:
   - homelab-systems
-excerpt: Fixed an invalid format error when importing SSH keys into ChromeOS Secure Shell by addressing missing newline characters and cipher issues.
+excerpt: "Fixed an invalid format error when importing SSH keys into ChromeOS Secure Shell by addressing missing newline characters and cipher issues."
 ---
 
 I needed a lightweight way to SSH into my remote home server from my recently new (very, but very old, haha) Chromebook without burning through the battery. Spawning Crostini just to keep a terminal open runs a full Debian VM in the background, which drains the battery fast. Termius on Android is lighter, but the native ChromeOS Secure Shell app is just the most (I think) power-efficient option. The problem started when I tried importing my existing SSH key pair into the native app's Identity dropdown and got slapped with a vague "invalid format" error every time I tried to connect.

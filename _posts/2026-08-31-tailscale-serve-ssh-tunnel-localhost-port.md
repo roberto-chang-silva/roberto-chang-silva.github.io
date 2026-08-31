@@ -1,7 +1,7 @@
 ---
 title: "Serving a Localhost-Only Port Through Tailscale via an SSH Tunnel"
 date: 2026-08-31
-permalink: /posts/tailscale-serve-ssh-tunnel-localhost-port/
+permalink: /posts/tailscale-serve-ssh-tunnel-localhost-port
 tags:
   - tailscale
   - ssh
