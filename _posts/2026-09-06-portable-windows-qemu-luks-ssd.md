@@ -198,4 +198,3 @@ MySSD/
 - The evaluation license is 90 days. After it expires you reinstall from the ISO. The template snapshot does not help here since it is stored inside the qcow2 and the license timer is baked into the Windows install itself, or just get your license.
 - To compact the image after heavy use: run `sdelete64.exe -z C:` inside Windows first (from Sysinternals), then `qemu-img convert -O qcow2 -c windows.qcow2 windows-compact.qcow2` from the host.
 - If you plug the SSD into a machine that does not have `qemu-system-x86_64` installed, none of this works. That is the only real dependency.
-```
