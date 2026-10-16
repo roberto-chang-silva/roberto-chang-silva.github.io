@@ -21,7 +21,7 @@ Industrial emission monitoring networks generate dense, multivariate sensor stre
 * Demonstrated improved forecasting accuracy during periods of rapid emission fluctuation across multiple prediction horizons.
 * Provided interpretable attention weights identifying the sensors most influential to each forecast, supporting emissions management and compliance monitoring.
 
-<!-- ## Download & Resources
-* [Download Full Paper PDF](https://academicpages.github.io/files/paper-mathgeo-gast-emissions.pdf)
-* [View Presentation Slides](https://academicpages.github.io/files/slides-mathgeo-gast-emissions.pdf)
-* [GitHub Repository for Simulation Code](https://github.com/yourusername/graph-attention-sensor-transformer) -->
+## Download & Resources
+* [Read the Full Paper here!](https://rdcu.be/fukBa)
+<!-- * [View Presentation Slides](https://academicpages.github.io/files/slides-mathgeo-gast-emissions.pdf) -->
+* [GitHub Repository for Simulation Code](https://github.com/roberto-chang-silva/GAS-GraphAttentionSensor)
