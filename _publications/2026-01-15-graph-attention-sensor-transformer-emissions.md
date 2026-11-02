@@ -7,7 +7,7 @@ excerpt: 'This paper introduces a Graph Attention Sensor Transformer that models
 date: 2026-01-15
 venue: 'Mathematical Geosciences'
 # slidesurl: 'https://academicpages.github.io/files/slides-mathgeo-gast-emissions.pdf'
-# paperurl: 'https://academicpages.github.io/files/paper-mathgeo-gast-emissions.pdf'
+paperurl: 'https://rdcu.be/fukBa'
 # bibtexurl: 'https://academicpages.github.io/files/bibtex-mathgeo-gast-emissions.bib'
 citation: 'Chang-Silva, R., Song, N., Lee, K., &amp; Park, S. (2026). &quot;Graph Attention Sensor Transformer for Industrial Emission Forecasting: A Comparative Study Against Classical and Deep Learning Baselines.&quot; <i>Mathematical Geosciences</i>. https://doi.org/10.1007/s11004-026-10320-x'
 ---
