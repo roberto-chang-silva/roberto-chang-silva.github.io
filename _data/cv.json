@@ -1,152 +1,172 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Roberto Chang-Silva",
+    "email": "rjavierch@gmail.com",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "",
+    "summary": "Ph.D. Candidate in Applied Artificial Intelligence. Research on spatiotemporal forecasting, geospatial ML pipelines, and climate modeling, with a focus on flash drought prediction.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
+      "city": "Seoul",
+      "countryCode": "KR",
       "region": ""
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
         "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
-        "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "0000-0001-7505-6787",
+        "url": "https://orcid.org/0000-0001-7505-6787"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "name": "Seoul National University of Science and Technology (AIRLab)",
+      "position": "Ph.D. Researcher (Applied AI), under Prof. SeongYoung Park",
+      "url": "https://air.seoultech.ac.kr/index.do",
+      "startDate": "2023-09",
+      "endDate": "",
+      "summary": "Developing a Transformer-based model for flash drought prediction, and a satellite-informed sensor placement algorithm for urban PM2.5 monitoring.",
+      "highlights": [
+        "Transformer-based flash drought prediction that outperforms LSTM and CNN baselines across surface and root zone soil moisture.",
+        "Multi-criteria sensor placement algorithm (NSGA-II) for urban PM2.5 monitoring that reduces deployment costs while keeping near-optimal coverage."
+      ]
+    },
+    {
+      "name": "Kyung Hee University (EMSEL Lab)",
+      "position": "M.Sc. Researcher, under Prof. ChangKyoo Yoo",
+      "url": "",
+      "startDate": "2021-03",
+      "endDate": "2023-08",
+      "summary": "Research on urban air quality forecasting with graph-based deep learning.",
+      "highlights": [
+        "Architected LSTGraphNet, a Spatiotemporal Long Short-Term Graph Convolutional Network for urban PM2.5 forecasting, improving prediction performance by 22% over baseline models.",
+        "Reduced underestimation at high temporal horizons by 10%.",
+        "Demonstrated generalization at monitoring stations with low spatiotemporal correlation."
+      ]
+    },
+    {
+      "name": "ESPOL Polytechnic University",
+      "position": "Guest Lecturer / Teaching Assistant",
+      "url": "",
+      "startDate": "2015-05",
+      "endDate": "2021-03",
+      "summary": "Teaching and mentoring in surveying, GIS, groundwater modeling, and mining engineering.",
+      "highlights": [
+        "Designed and delivered the Surveying course from scratch for cohorts of about 30 civil and mining engineering students per semester.",
+        "Instructed courses in GIS, Groundwater Modeling (Feflow), Mine Design, and Drilling & Blasting.",
+        "Mentored undergraduate students in geospatial research, contributing to co-authored conference proceedings at LACCEI 2020 and LACCEI 2021."
+      ]
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "Seoul National University of Science and Technology",
+      "area": "Applied Artificial Intelligence",
+      "studyType": "Ph.D. (Candidate)",
+      "startDate": "2023-09",
+      "endDate": "",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
+      "institution": "Kyung Hee University - Global Campus",
+      "area": "Environmental Engineering (focus on Machine Learning and AI Applications)",
+      "studyType": "M.Sc.",
+      "startDate": "2021-03",
+      "endDate": "2023-08",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "institution": "ESPOL Polytechnic University",
+      "area": "Mining Engineering",
+      "studyType": "B.Sc.",
+      "startDate": "2012-05",
+      "endDate": "2017-09",
       "gpa": null,
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
+  "skills": [
+    {
+      "name": "AI & Machine Learning",
+      "level": "",
+      "keywords": ["Python", "TensorFlow", "Keras", "Scikit-learn", "RAPIDS/cuML", "Explainable AI (SHAP)", "Time-series Forecasting", "LLMs"]
+    },
+    {
+      "name": "Data & Infrastructure",
+      "level": "",
+      "keywords": ["Pandas", "NumPy", "Xarray", "NetCDF", "Docker", "Podman", "Linux", "QGIS", "ArcGIS"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Predicting Flash Droughts Using Transformers: Understanding Surface and Root Zone",
+      "publisher": "EGUsphere",
+      "releaseDate": "2025",
+      "website": "",
+      "summary": "Authors: Chang-Silva, R., & Park, S."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "Dynamic Model Selection in a Hybrid Ensemble Framework for Robust Photovoltaic Power Forecasting",
+      "publisher": "Sensors",
+      "releaseDate": "2025",
+      "website": "",
+      "summary": "Authors: Song, N., Chang-Silva, R., Lee, K., & Park, S."
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
+      "name": "Satellite-informed smart sensor placement framework for near-optimal PM2.5 monitoring in urban areas",
+      "publisher": "Environmental Science and Pollution Research",
+      "releaseDate": "2024",
+      "website": "",
+      "summary": "Authors: Chang-Silva, R., et al."
     },
     {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Smart solutions for urban health risk assessment: A PM2.5 monitoring system incorporating spatiotemporal long-short term graph convolutional network",
+      "publisher": "Chemosphere",
+      "releaseDate": "2023",
+      "website": "",
+      "summary": "Authors: Chang-Silva, R., et al."
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "name": "Predicting Flash Droughts Using Transformers (poster)",
+      "event": "EGU General Assembly 2024",
+      "date": "2024-04",
+      "location": "Vienna, Austria",
+      "description": "Presented ongoing Ph.D. research on Transformer-based flash drought prediction to an international audience of climate and geoscience researchers."
     }
   ],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "course": "Surveying",
+      "institution": "ESPOL Polytechnic University",
+      "date": "2015-05",
+      "role": "Guest Lecturer / Teaching Assistant",
+      "description": "Designed and delivered the course curriculum from scratch, covering field measurement techniques and CAD-based cartographic production."
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "course": "GIS, Groundwater Modeling (Feflow), Mine Design, Drilling & Blasting",
+      "institution": "ESPOL Polytechnic University",
+      "date": "2015-05",
+      "role": "Guest Lecturer / Teaching Assistant",
+      "description": "Hands-on courses bridging theoretical foundations with real-world engineering applications."
     }
   ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "portfolio": []
 }
